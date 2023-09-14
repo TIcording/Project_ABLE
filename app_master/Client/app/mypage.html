@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="./css/mypage.css">
+    <script src="./js/mypage.js" defer></script>
+    <script src="./js/mypage_api.js" defer></script>
+    <script src="./js/FAQ_api.js" defer></script>
+    <script src="./js/answer_api.js" defer></script>
+</head>
+<body>
+    <!-- 마이페이지 top -->
+    <div id="mypage__top">
+        <h3 id="mypage__top__title">마이페이지</h3>
+    </div>
+    <a href="../web/map.html"><img src="./images/close.png" alt="닫기 버튼" id="icon__x__button" class="button__move"></a>
+    <!-- 프로필 영역 -->
+    <div id="mypage__profile">
+        <img src="./images/user.png" alt="프로필 기본사진" id="profile__icon" style="width: 60px; height:60px">
+        <p id="hello__user"><b id="username">xx</b>님, 안녕하세요!</p>
+    </div>
+    <!-- Menu -->
+    <div class="Menu" id="Menu__container">
+        <!-- 내정보 수정 -->
+        <div id="myInfo__title__containder" class="title__container">
+            <img src="./images/edit.png" alt="정보수정아이콘" class="icon" >
+            <div id="myInfo__title" class="title">
+                <p class="menu__title">내 정보 수정</p>
+            </div>
+            <img src="./images/arrow-down.png" alt="아래화살표" id="myInfo__arrow__down" class="arrow__down active">
+            <img src="./images/arrow-up.png" alt="위화살표" id="myInfo__arrow__up" class="arrow__up ">
+        </div>
+
+        <div id="myInfo__text__container">
+            <div id="input__id">
+                <p>아이디</p>
+                <input type="text" class="input" id="idInput" placeholder="id">
+            </div>
+            <div id="input__name">
+                <p>이름</p>
+                <input type="text" class="input" id="nameInput" placeholder="홍길동">
+            </div>
+            <div id="input__address">
+                <p>주소</p>
+                <input type="text" class="input" id="addressInput">
+            </div>
+            <div id="input__phone">
+                <p>전화번호</p>
+                <input type="text" class="input" id="phoneInput" placeholder="010-0000-0000">
+            </div>
+            <div id="input__email">
+                <p>이메일</p>
+                <input type="text" class="input" id="emailInput" placeholder="example@example.com">
+            </div>
+
+            <div id="button__container">
+                <button type="reset" class="myInfo__button" id="myInfo__button1">다시 입력</button>
+                <button type="reset" class="myInfo__button" id="myInfo__button3">비밀번호</button>
+                <button type="submit" class="myInfo__button" id="myInfo__button2">수정 완료</button>
+            </div>
+        </div>
+        
+        <hr>
+        <!-- FAQ -->
+        <div id="FaQ__container">
+            <div id="FaQ__title__containder" class="title__container">
+                <img src="./images/faq2.png" alt="faq아이콘" id="FaQ__icon" class="icon">
+                <div id="FaQ__title" class="title">
+                    <p class="menu__title">FAQ</p>
+                </div>
+                <img src="./images/arrow-down.png" alt="아래화살표" id="Faq__arrow__down" class="arrow__down active">
+                <img src="./images/arrow-up.png" alt="위화살표" id="Faq__arrow__up" class="arrow__up ">
+            </div>
+            <div id="FaQ__text__container">
+
+            </div>
+        </div>
+        <hr>
+        <!-- CS -->
+        <div id="CS__container">
+            <div id="CS__title__container" class="title__container">
+                <img src="./images/headset.png" alt="cs아이콘" id="CS__icon" class="icon">
+                <div id="CS__title" class="title">
+                    <p class="menu__title">문의하기</p>
+                </div>
+                <img src="./images/arrow-down.png" alt="아래화살표" id="CS__arrow__down" class="arrow__down active">
+                <img src="./images/arrow-up.png" alt="위화살표" id="CS__arrow__up" class="arrow__up ">
+            </div>
+            <div id="CS__text__container">
+                    <li class="CS__list" id="CS__question">문의하기</li>
+                        <div id="CS__textarea">
+                            <div id = "CS__subtitle" style=" margin: 15px;">
+
+                                <span>문의제목</span>
+                                <input type="text" class="question" id="answerTitleInput"
+                                style="width: 67%;">
+                            </div>
+                                
+                            <textarea name="" id="textArea" cols="30" rows="10" fixed></textarea>
+                            <button type="submit" id="CS__submit__btn">제출</button>
+                        </div>
+                    <li class="CS__list" id="CS__answer">답변보기</li>
+                        <div id="CS__answer__container">
+
+                            
+                        </div>
+            </div>
+        </div>
+        <hr>
+        <!-- setting -->
+        <div id="setting__container">
+            <div id="setting__title__container" class="title__container">
+                <img src="./images/setting.png" alt="설정아이콘" id="setting__icon" class="icon">
+                <div id="setting__title" class="title">
+                    <p class="menu__title">설정</p>
+                </div>
+                <img src="./images/arrow-down.png" alt="아래화살표" id="setting__arrow__down" class="arrow__down active">
+                <img src="./images/arrow-up.png" alt="위화살표" id="setting__arrow__up" class="arrow__up ">
+            </div>
+            <div id="setting__text__container">
+                <span id="version__info">버전 정보</span>
+                <span id="version__value">v 1. 0. 0</span>
+                <!-- <div id="setting__toggle__container">
+                    <img src="../images/off-button.png" alt="토글끔" class="toggle__btn" id="toggle__off">
+                    <img src="../images/on-button.png" alt="토글켬" class="toggle__btn" id="toggle__on">
+                </div> -->
+                
+            </div>
+        </div>
+        <div id="footer__logout">
+            <a href="#" class="logout__btn" id="logout">로그아웃</a>
+        </div>
+    </div>
+</body>
+</html>

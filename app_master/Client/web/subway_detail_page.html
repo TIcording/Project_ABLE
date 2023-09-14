@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지하철 편의시설 정보</title>
+    <link rel="stylesheet" href="./subway_detail_page.css">
+    <script>
+        const queryString = window.location.search; // URL의 쿼리 매개변수 추출
+        const urlParams = new URLSearchParams(queryString); // URLSearchParams 객체 생성
+        let station_name = urlParams.get("station_name"); // 변수 가져오기
+
+        // 사용자가 입력한 역 이름의 길이
+        let len = station_name.length;
+
+        // 마지막'역'을 가져오기 위해 len -1
+        lastchar = station_name.charAt(len - 1)
+
+        console.log(lastchar)
+        console.log(station_name)
+        if (lastchar == '역') {
+            console.log(lastchar)
+            num = len - 1;  // 마지막'역'을 잘라주기 위해
+            station_name = station_name.slice(0, num)
+        } else {
+            num = len;
+        }
+
+        //장애인화장실, 충전소개수 
+        function getSubwayConv(station_name) {
+            const convURL = `https://port-0-teamprojectserver-pi0mb2blhqyfirt.sel4.cloudtype.app/conv/${station_name}`
+
+            fetch(convURL)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('오류!')
+                    }
+                    return response.json()
+                })
+                .then(data => {
+                    const conv = data
+                    // console.log(`conv.toilet: ${conv.toiletCnt}`)
+                    // console.log(`conv.wheelchairCnt: ${conv.wheelchairCnt}`)
+                    const tolietCnt_contain = document.querySelector
+                        ('#toiletCount__container')
+
+                    if (!conv.toiletCnt) {
+                        tolietCnt_contain.innerHTML = `<p class="no_info">정보없음</p>`
+                    }
+                    else {
+                        tolietCnt_contain.innerHTML = `<p>${conv.toiletCnt}개</p>`
+                    }
+                    const chargerCnt_contain = document.querySelector('#charherCount__container')
+                    if (!conv.wheelchairCnt) {
+                        chargerCnt_contain.innerHTML = `<p class="no_info">정보없음</p>`
+                    }
+                    else {
+                        chargerCnt_contain.innerHTML = `<p>${conv.wheelchairCnt}개</p>`
+                    }
+
+
+                })
+        }
+
+        // 전동 휠체어 탑승공간
+        function getWheelDoor(station_name) {
+            const wheelURL = `https://port-0-teamprojectserver-pi0mb2blhqyfirt.sel4.cloudtype.app/wheel?station=${station_name}`
+
+            fetch(wheelURL)
+                .then(response => {
+                    console.log('wheel테스트')
+                    if (!response.ok) {
+                        throw new Error('오류!')
+                    }
+                    return response.json()
+                })
+                .then(data => {
+                    const wheel = data
+                    // console.log(`${wheel}`)
+                    // console.log(`wheel.length: ${wheel.length}`)
+                    let html = '';
+                    const wheelLineNum = document.querySelector('#wheelchair__context__container')
+                    if (wheel.length === 0) {
+                        // console.log(wheel)
+                        // console.log('전동휠체어 탑승 구간 정보없음')
+                        wheelLineNum.innerHTML = `<p class="no_info">정보없음</p>`
+                    }
+                    else {
+                        for (let i = 0; i < wheel.length; i++) {
+                            // console.log(`wheelline: ${wheel[i].line}`)
+                            // console.log(`wheelloca: ${wheel[i].loca}`)
+                            let color ='';
+                            switch (wheel[i].line) {
+                                case 1:
+                                color = 'rgb(42, 95, 202)';
+                                    break;
+                                case 2:
+                                color = 'rgb(68, 170, 28)';
+                                    break;
+                                case 3:
+                                color = 'rgb(214, 117, 5)';
+                                    break;
+                                case 4:
+                                color = 'rgb(5, 186, 214)';
+                                    break;
+                                case 5:
+                                color = 'rgb(151, 49, 214)';
+                                    break;
+                                case 6:
+                                color = 'rgb(138, 83, 25)';
+                                    break;
+                                case 7:
+                                color = 'rgb(79, 119, 3)';
+                                    break;
+                                case 8:
+                                color = 'rgb(211, 36, 118)';
+                                    break;
+                                case 9:
+                                color = 'rgb(158, 139, 98)';
+                                    break;
+                                
+                            }
+                                
+
+                            html += `<div id="wheelchair__contain"><div class="wheelchair__lineNum" style="background-color:${color}; ">${wheel[i].line}</div>
+            <div id="wheelchair__location">${wheel[i].loca}번</div></div>`
+                        }
+                        wheelLineNum.innerHTML = html;
+                    }
+                })
+        }
+
+        // 연단간격이 좁은 승하차 구간
+        function getSubwayDoor(station_name) {
+            const doorURL = `https://port-0-teamprojectserver-pi0mb2blhqyfirt.sel4.cloudtype.app/door?station=${station_name}`
+
+            fetch(doorURL)
+                .then(response => {
+                    // console.log('door테스트')
+                    if (!response.ok) {
+                        throw new Error('오류!')
+                    }
+                    return response.json()
+                })
+                .then(data => {
+                    const door = data
+                    let html = '';
+                    const door_loca = document.querySelector('#boardinglocation__context__container')
+                    if (door.length === 0) {
+                        door_loca.innerHTML = `<p class="no_info">정보없음</p>`
+                    }
+                    else {
+                        for (let i = 0; i < door.length; i++) {
+                            let color ='';
+                            switch (door[i].line) {
+                                case 1:
+                                color = 'rgb(42, 95, 202)';
+                                    break;
+                                case 2:
+                                color = 'rgb(68, 170, 28)';
+                                    break;
+                                case 3:
+                                color = 'rgb(214, 117, 5)';
+                                    break;
+                                case 4:
+                                color = 'rgb(5, 186, 214)';
+                                    break;
+                                case 5:
+                                color = 'rgb(151, 49, 214)';
+                                    break;
+                                case 6:
+                                color = 'rgb(138, 83, 25)';
+                                    break;
+                                case 7:
+                                color = 'rgb(79, 119, 3)';
+                                    break;
+                                case 8:
+                                color = 'rgb(211, 36, 118)';
+                                    break;
+                                case 9:
+                                color = 'rgb(158, 139, 98)';
+                                    break;
+                                
+                            }
+                            html += `<div id="boardinglocation__contain">
+            <div id="direction1" class="direnction" style="background-color:${color};">${door[i].direction}</div>
+            <p class="direction__text">${door[i].door}번</p></div>
+            `
+
+                        }
+                    door_loca.innerHTML = html;
+                    }
+                })
+        }
+
+        if (station_name) {
+            getSubwayConv(station_name);
+            getSubwayDoor(station_name)
+            getWheelDoor(station_name)
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- 지하철 편의시설 정보 top -->
+    <div id="sub__convenience__title">
+
+    </div>
+    <a href="../subway/index.html"><img src="../app/images/close.png" alt="닫기 버튼" id="icon__x__button"
+            class="button__move"></a>
+    <hr id="hr__top">
+    <!-- 역무실 전화번호 -->
+    <div id="sub__officephone__container">
+        <img src="../app/images/phone.png" alt="">
+        <p id="sub__officephone__text" class="title"> 역무실 전화번호</p>
+    </div>
+    <div id="sub__officephoneNumber__container">
+
+    </div>
+
+
+    <hr>
+    <!-- 전동차 전용공간 승하차 위치-->
+    <div id="wheelchair__container">
+        <div id="wheelchair__title__container">
+            <img src="../app/images/disability.png" alt="">
+            <p class="title">전동차 전용공간 승·하차 위치</p>
+        </div>
+        <div id="wheelchair__context__container">
+
+
+        </div>
+    </div>
+    <hr>
+    <!-- 연단간격이 좁은 승하차 위치 -->
+    <div id="boaringlocation__container">
+        <div id="boardinglocation__title__container">
+            <img src="../app/images/train.png" alt="">
+            <div id="boardinglocation__text__container">
+                <p id="boardinglocation__title" class="title">연단간격이 좁은 승·하차 위치</p>
+                <p id="boarding__description">(열차와 승강장 사이가 좁은 승·하차 위치)</p>
+            </div>
+        </div>
+
+
+        <div id="boardinglocation__context__container">
+            <!-- <div id="door__lineNum">2</div>
+            <div id="direction1" class="direnction">대화행</div>
+            <p class="direction__text">1-1</p>
+            <div id="direction2" class="direnction">오금행</div>
+            <p class="direction__text">10-1</p> -->
+        </div>
+    </div>
+    <hr>
+
+    <!-- 엘레베이터 정보 -->
+    <div id="elevator__container">
+        <div id="elevator__title__container">
+            <img src="../app/images/elevator.png" alt="">
+            <p class="title">엘리베이터 정보</p>
+        </div>
+        <div id="elevator__context__container">
+            <!-- <div class="inner__outer__separator">
+            외</div>
+            <p> 엘베위치</p> -->
+        </div>
+    </div>
+    <hr>
+    <!-- 휠체어 리프트 정보 -->
+    <div id="wheelchairLift__container">
+        <img src="../app/images/wheelchair.png" alt="">
+        <p class="title">휠체어 리프트 정보</p>
+        <!-- <p>n개</p> -->
+    </div>
+    <div id="wheelchairLift__context__container">
+
+    </div>
+    <hr>
+    <!-- 장애인 화장실 정보 -->
+    <div id="toilet__container">
+        <img src="../app/images/toilet.png" alt="">
+        <p class="title" id="toilet__title">장애인 화장실</p>
+        <div id="toiletCount__container">
+            <!-- <p>n개</p> -->
+        </div>
+
+    </div>
+    <hr>
+    <!-- 휠체어 충전소 정보 -->
+    <div id="charger__container">
+        <img src="../app/images/charging.png" alt="">
+        <p class="title" id="charger__title">전동휠체어 충전소</p>
+        <div id="charherCount__container">
+            <!-- <p>n개</p> -->
+        </div>
+
+    </div>
+    <script type="text/javascript" src="./elevator.js" class="elevator"></script>
+    <script type="text/javascript" src="./elevator2.js" class="elevator"></script>
+    <script type="text/javascript" src="./elevator3.js" class="elevator"></script>
+    <!-- <pre id="jsonOutput"></pre> -->
+    <script type="text/javascript" src="./subway_office.js" class="subwayOffice"></script>
+</body>
+
+</html>

@@ -1,0 +1,658 @@
+@font-face {
+    font-family: 'Humanbumsuk';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+html {
+    font-family:'KIMM_Bold' !important;
+    font-weight: 700;
+}
+body {
+    font-family:'KIMM_Bold' ;
+}
+div {
+    font-family:'KIMM_Bold' ;
+    font-weight: 700;
+}
+
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+
+    --color-myskyblue: rgb(172, 214, 240);
+    --color-mynavy: rgb(2, 57, 91);
+    --color-myred: rgb(240, 54, 41);
+    --color-myblue: rgb(43, 94, 196);
+
+}
+
+/* 메뉴 버튼과 검색창과 검색버튼 */
+#top{
+    position: relative; 
+    z-index: 2;
+    margin: 15% 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.top__button{
+    position: fixed;
+}
+
+#facility_name {
+    width: 70%;
+    margin: 0 20px;
+    border-radius: 20px;
+    font-size: 30px;
+    padding-left: 30px;
+    border: none;
+    background-color: gainsboro;
+}
+
+.search{
+    width: 12%;
+    /*font-size: 200%;*/
+    border-radius: 20px;
+    background-color: var(--color-myskyblue);
+    border: none;
+}
+#search {
+    width: 40px;
+    height: 40px;
+}
+/* 마커를 보일 버튼 */
+#button {
+    position: relative; 
+    /* position: absolute; */
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.depart, .arrive {
+    width: 200px;
+    height: 100px;
+    font-size: 30px;
+    margin: 10px 20px 10px 20px;
+    /* margin-top: 20px; */
+    border: none;
+    background-color: rgb(226, 241, 246);
+    border-radius: 20px;
+    color: var(--color-mynavy);
+}
+.depart{
+    margin-left: 30px;
+}
+.arrive{
+    margin-right: 0px;
+}
+
+.facility, .library, .residue, .ambulance, .others, .charger{
+    background-color: rgb(226, 241, 246);;
+    color: var(--color-mynavy);
+    border: none;
+    width: 500px;
+    height:100px;
+    font-size: 180%;
+    border-radius: 20px;
+    margin-right: 19px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgb(146, 146, 168);
+}
+.charger{
+    background-color: rgb(226, 241, 246);;
+    color: var(--color-mynavy);
+    border: none;
+    width: 500px;
+    height:100px;
+    font-size: 180%;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* 버튼을 눌렀을 때의 변화 */
+.press{
+    background-color: var(--color-mynavy);
+    color: white;
+}
+
+/* 정보창 */
+
+
+/* 아이콘 */
+#bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 현재 위치 */
+#current_position {
+    position: relative; 
+    z-index: 2;
+    margin: 20px;
+}
+.current_position {
+    border-radius: 50%; 
+    background-color: rgb(226, 241, 246);
+    border: none;
+    padding: 20px;
+
+}
+.current_position > img {
+    width: 100px;
+    height: 100px;
+}
+
+#info {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    height: 35%;
+    border-bottom: 1px solid black;
+    font-size: 40px;
+}
+
+#button_de_arr{
+    display: flex;
+    margin: 20px;
+    align-items:center;
+
+}
+
+#library_favorite, #charger_favorite, #medical_favorite, #residue_favorite, #ambulance_favorite, #etc_favorite{
+    margin-left: auto;
+    width: 100px;
+    height: 100px;
+}
+
+
+#marker_name {
+    border-bottom: 3px solid black;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#marker_info{
+    padding: 20px;
+}
+
+
+#marker_name img {
+    padding: 10px;
+    width: 68px;
+    height: 68px;
+}
+
+/* info 창에서 이름을 누르면 숨겨져 있던 창 설정.*/
+#detail {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow-x: scroll;
+}
+
+#detail_marker_name {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 30px;
+    height: 10%;
+    font-size: 50px;
+    border-bottom: 3px solid black;
+}
+
+#detail_marker_name img {
+    margin-right: 40px;
+    width: 70px;
+    height: 70px;
+}
+.out_img {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+}
+
+#detail_marker_info {
+    font-size: 50px;
+    margin: 20px;
+    padding: 20px;
+}
+
+/*의료시설, 기타시설, 거주지 시설 전체 창 디자인*/
+#medical_address{
+    font-size: 50px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#medical_address_img, #medical_phone_img, #medical_facility_img, #medical_information_img{
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+}
+
+#medical_address img, #medical_phone img, #medical_facility_name img, #medical_information img{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 10px;
+}
+
+#medical_phone, #medical_facility_name, #medical_information{
+    font-size: 60px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+#medical_phone p, #medical_facility_name p, #medical_information p{
+    /* margin: 5px; */
+    padding: 10px;
+    margin: 40px 5px;
+}
+
+#medical_address, #medical_phone, #medical_facility_name, #medical_information{
+    border-bottom: 3px solid black;
+    /* font-family: 'NanumSquareNeo-Variable'; */
+    font-weight: normal;
+}
+
+/*도서관 전체 창 디자인*/
+#library_address, #library_phone, #library_time, #library_break, #library_URL{
+    font-size: 50px;
+    padding: 10px;
+    margin: 5px;
+    /* font-family: 'NanumSquareNeo-Variable'; */
+    font-weight: normal;
+    border-bottom: 3px solid black;
+}
+
+#library_address_img, #library_phone_img, #library_time_img, #library_break_img, #library_URL_img{
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+}
+
+#library_phone_img, #library_time_img, #library_break_img, #library_URL_img{
+    margin-top: 30px;
+}
+
+#library_address img, #library_phone img, #library_time img, #library_break img, #library_URL img{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+/*응급실 전체 창 디자인*/
+#ambulance_address, #ambulance_phone, #ambulance_information, #ambulance_operation_time{
+    /* font-family: 'NanumSquareNeo-Variable'; */
+    font-weight: normal;
+    border-bottom: 3px solid black;
+}
+
+#ambulance_address, #ambulance_phone, #ambulance_information, #ambulance_operation_time{
+    font-size: 50px;
+}
+#ambulance_address_img{
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+}
+#ambulance_phone_img, #ambulance_information_img, #ambulance_time_img{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+}
+
+#ambulance_address img, #ambulance_phone img, #ambulance_information img, #ambulance_operation_time img{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+/*충전소 전체 창 디자인*/
+#detail_marker_name, #charger_address, #charger_operation_time, #charger_information, #charger_manage, #depart_arrival {
+    /* font-family: 'NanumSquareNeo-Variable'; */
+    font-weight: normal;
+}
+
+#charger_address, #charger_manage {
+    font-size: 40px;
+}
+
+#charger_address, #charger_operation_time, #charger_information, #charger_manage{
+    border-bottom: 3px solid black;
+}
+
+#charger_img, #charger_time, #information, #management{
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+}
+
+#charger_address img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+}
+
+#information img, #management img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+}
+
+#charger_time img{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+}
+
+#depart_arrival{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+    margin: 20px;
+}
+
+#depart_arrival button{
+    width: 200px;
+    height: 100px;
+    font-size: 50px;
+    margin: 20px;
+    background-color: white;
+    color: #cc99ff;
+    border: 3px solid #cc99ff;
+}
+
+/*아래 메뉴*/
+#option {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.way_icon, .subway_icon, .taxi_icon, .ambulance_icon {
+    background-color: white;
+    border: 0px;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding-top: 10px;
+}
+.way_icon >p, .subway_icon >p, .taxi_icon >p, .ambulance_icon >p{
+    font-size: var(--font-medium);
+    font-weight: bold;
+}
+
+.way_icon >img, .subway_icon >img, .taxi_icon >img, .ambulance_icon >img {
+    width: 100px;
+    height: 100px;
+}
+
+/* 햄버거 버튼 */
+#menu {
+    width: 70%;
+    height: 100%;
+    padding-top: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.menu {
+    width: 12%;
+    height: 100px;
+    border: none;
+    border-radius:20px;
+    background-color: rgb(226, 241, 246);
+}
+
+/* 누르면 보이게 하고 아니면 안보이게 하기 */
+
+.index {
+    position: relative;
+    z-index: 3;
+    background-color: white;
+}
+
+.hide{
+    display: none;
+}
+
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px 20px 20px;
+    height: 15%;
+}
+
+#login img {
+    margin-top: 20%;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+#login p {
+    font-size: 40px;
+}
+
+#login_menu {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin: 20px;
+    height: 15%;
+    font-family: 'KIMM_Bold';
+}
+
+#login_menu p {
+    font-size: 40px;
+}
+
+.like, .home, .etc {
+    background-color: white;
+    border: 0px;
+    margin-top:50px;
+    width: 50%;
+}
+.like >p , .home >p  {
+    font-family: 'KIMM_Bold';
+    font-weight: 700;
+    border-bottom: 0;
+}
+#menu_little {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+#plane, #taxi, #subway, #ambulance {
+    display: flex;
+    /* border-left: 5px solid black; */
+    align-items: center;
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+#plane img, #taxi img, #subway img, #ambulance img {
+    margin: 30px;
+}
+
+#menu_little img {
+    width: 70px;
+    height: 70px;
+}
+
+#last {
+    border-top: 1px solid black;
+    margin: 10px;
+    font-size: 30px;
+}
+
+#my_search{
+    position: relative; 
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+/* 검색창에 나오는 화면 style 꾸미기*/
+#my_search{
+    font-family: 'KIMM_Bold';
+    font-weight: normal;
+    font-size: 50px;
+    overflow: auto;
+}
+
+/* x 버튼 */
+#get_out_of_search_result{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    width: 8%;
+}
+#get_out_of_result{
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    width: 8%;
+}
+
+#library_text, #ambulance_text, #charger_text, #etc_text, #medical_text, #residue_text{
+    border-top: 3px solid black;
+}
+
+#search__library, #search__ambulance, #search__charger, #search__etc, #search__medical, #search__residue{
+    border-top: 3px solid black;
+}
+
+/* 길찾기 꾸미기*/
+#depart_place, #arrive_place, #place_arrive, #place_depart, #departure_place, #my_place_to_depart, #arrival_place, #my_place_to_arrive{
+    width: 50%;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 20px;
+    font-size: 30px;
+    padding-left: 30px;
+    border: none;
+    background-color: gainsboro;
+}
+
+.search_departure, .departure_search, .search_depart, .want_to_find_depart_location{
+    width: 12%;
+    /*font-size: 200%;*/
+    border-radius: 20px;
+    background-color: var(--color-myskyblue);
+    border: none;
+    margin-right: 20px;
+}
+
+.search_arrival, .arrival_search, .search_arrive, .want_to_find_arrive_location{
+    width: 12%;
+    /*font-size: 200%;*/
+    border-radius: 20px;
+    background-color: var(--color-myskyblue);
+    border: none;
+    margin-right: 20px;
+}
+
+.find_road, .road_find, .find_road_to_destination, .search_my_route{
+    width: 12%;
+    /*font-size: 200%;*/
+    border-radius: 20px;
+    background-color: var(--color-myskyblue);
+    border: none;
+}
+
+.bus, .subway, .subway_bus, #show_line, #hide_line {
+    background-color: rgb(226, 241, 246);;
+    color: var(--color-mynavy);
+    border: none;
+    width: 500px;
+    height:100px;
+    font-size: 180%;
+    border-radius: 20px;
+    margin-right: 19px;
+    font-weight: bold;
+}
+
+#search_result_path{
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    height: 100vh;
+}
+
+#cost_time{
+    /* font-family: 'NanumSquareNeo-Variable'; */
+    font-weight: normal;
+    font-size: 50px;
+    border-bottom: 3px solid black;
+    height: 5vh;
+    padding-top: 20px;
+}
+
+#least_route{
+    /* font-family: 'NanumSquareNeo-Variable'; */
+    font-weight: normal;
+    font-size: 40px;
+    border-bottom: 3px solid black
+}
+
+#solo_result{
+    overflow: auto;
+}
+#small_login {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+#search_result_total {
+    border-bottom: 1px solid black;
+    padding-left: 50px;
+}
+#search_result_place {
+    color: var(--color-mynavy);
+}
+#search_result_address {
+    font-size: 38px;
+}

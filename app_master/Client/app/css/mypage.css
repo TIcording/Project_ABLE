@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    font-family: 'KIMM_Bold';
+}
+body {
+    margin: 15% 15px;
+}
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+
+    --color-myskyblue: rgb(172, 214, 240);
+    --color-mynavy: rgb(2, 57, 91);
+}
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+#mypage__top{
+    width: 100%;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+#mypage__top__title{
+    margin-bottom: 30px;
+}
+#Menu__container{
+    width: 100%;
+}
+#icon__x__button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 60px;
+
+}
+
+#mypage__profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    margin-bottom: 40px;
+}
+#mypage__profile > p > b{
+    color: var(--color-mynavy);
+}
+
+/* 내정보 수정 */
+.title__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.icon {
+    margin-right: 10px;
+}
+.title {
+    text-align: left;
+}
+
+.title p {
+    margin: 0;
+}
+/* 내정보 수정 컨테이너 */
+#myInfo__text__container {
+    display: none;
+}
+
+#myInfo__text__container  p {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    
+}
+
+#myInfo__text__container  .input {
+    margin-left: 10px;
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--color-myskyblue);
+}
+
+#button__container {
+    display: flex; /* 컨테이너를 플렉스 박스로 설정 */
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+#button__container > .myInfo__button{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: var(--font-regular);
+}
+#myInfo__button1 { background-color: white}
+#myInfo__button3 { background-color: gray}
+#myInfo__button2 { background-color: lightblue}
+
+
+/* FAQ 컨테이너 */
+#FaQ__text__container {
+    display: none;
+    margin: 30px
+}
+
+
+
+/* CS 컨테이너 */
+#CS__text__container {
+    display: none;
+}
+#CS__textarea {
+    display: none;
+    width: 100%;
+}
+
+
+#CS__textarea > textarea {
+    resize: none;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    width: 80%;
+    
+}
+#CS__textarea > p {
+    margin: 15px;
+    font-size: var(--font-small);
+    box-sizing: border-box;
+}
+#CS__submit__btn {
+    width: 60px;
+    height: 30px;
+    background-color: lightskyblue;
+    display: block;
+    position: relative;
+    left: 70%;
+}
+#CS__text__container > li {
+    list-style:none;
+    margin: 20px 20px;
+}
+#CS__answer__container {
+    display: none;
+    height: 50px;
+}
+/* 설정 */
+#setting__text__container {
+    display: none;
+    
+}
+#version__info{
+    margin-left: 20px;
+}
+#version__value {
+    position: absolute;
+    left: 70%;
+}
+/* #toggle__off {
+    display: none;
+} */
+h3 {
+    font-size: var(--font-medium) ;
+}
+#hello__user { font-size: var(--font-regular);}
+
+.menu__title{
+    font-size: var(--font-regular);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.arrow__down {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+/* .active {
+    display: none;
+} */
+.arrow__up {
+    width: 20px;
+    height: 20px;
+    display: none;
+    margin-left: auto;
+}
+#footer__logout {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+}
+#logout {
+    margin-right: 20px;
+}
+.logout__btn{
+    text-decoration: none;
+    color: gray;
+}
+.logout__btn:hover{
+    color: lightskyblue;
+}
+
+.title__container{
+    margin-bottom: 40px;
+}
+
+/* #check_btn { display: none; }
+
+
+#check_btn:checked ~ .menubars { display: block !important ; } 
+.menubars { display: none; } */

@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>지하철 노선도</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/svg-pan-zoom.min.js"></script>
+    <script type="text/javascript" src="./js/thumbnailViewer.js"></script>
+    <link rel="stylesheet" href="./css.css">
+    <script>
+        
+        var obj;
+        $(document).ready(function () {
+            $('#seoulSubwayMap')[0].addEventListener('load', function () {
+                obj = svgPanZoom('#seoulSubwayMap');
+
+                obj.zoomAtPointBy(4, { x: $('#mainViewContainer').width() + 500, y: $('#mainViewContainer').height() - 500 });
+
+
+                var svgDoc = $('#seoulSubwayMap')[0].getSVGDocument();
+
+                svgDoc.onmousemove = function (evt) {
+                    var clickedElement = evt.target;
+
+                    $(svgDoc).find('text').attr('font-size', '20px');
+                    $(svgDoc).find('tspan').attr('font-size', '20px');
+                    if ($(clickedElement).is("text") || $(clickedElement).is("tspan")) {
+                        if ($(clickedElement).parent().attr('id') != 'legend_x5F_ko') {
+                            $(clickedElement).css('cursor', 'pointer');
+                            $(clickedElement).attr('font-size', '30px');
+                            if ($(clickedElement).is("tspan")) {
+                                $(clickedElement).siblings().css('cursor', 'pointer');
+                                $(clickedElement).siblings().attr('font-size', '30px');
+                            }
+                        }
+                    }
+                }
+
+                svgDoc.onclick = function (evt) {
+                    var clickedElement = evt.target;
+                    if ($(clickedElement).is("text") || $(clickedElement).is("tspan")) {
+                        console.log($(clickedElement).text());
+                    }
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    
+    <!-- 지하철 노선도 top -->
+    <div id="subway__top">
+        <h2>지하철 노선도</h2>
+    </div>
+    <div id="container">
+        <div id="info__container">
+            <img src="../app/images/information.png" alt="">
+            <p id="subwayMap__info__text">역 이름으로 검색하여 역 내 편의시설 정보를 확인해보세요.</p>
+        </div>
+        <a href="../web/map.html"><img src="../app/images/close.png" alt="닫기 버튼" id="icon__x__button"
+                class="button__move"></a>
+        <div id="searchStation__container">
+            <form onsubmit="return false">
+                <div id="searchStaition__context">
+                    <!-- <p>검색</p> -->
+                    <input type="text" name="station_name" autofocus placeholder="예) 역삼" id="input_station_name"
+                        required>
+                    <button type="submit" id="search__btn" onclick="ClickSubmit()">
+                        <img src="../app/images/search.png" alt="검색 이미지" id="search__img "
+                            style="width:20px; height: 20px;">
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div id="mainViewContainer">
+            <embed id="seoulSubwayMap" type="image/svg+xml" src="Seoul_subway_linemap_ko.svg" />
+        </div>
+    </div>
+
+
+
+    <!-- <div id="thumbViewContainer">
+            <svg id="scopeContainer" class="thumbViewClass">
+                <g>
+                    <rect id="scope" fill="red" fill-opacity="0.1" stroke="red" stroke-width="2px" x="0" y="0" width="0" height="0"/>
+                    <line id="line1" stroke="red" stroke-width="2px" x1="0" y1="0" x2="0" y2="0"/>
+                    <line id="line2" stroke="red" stroke-width="2px" x1="0" y1="0" x2="0" y2="0"/>
+                </g>
+            </svg>
+            <embed id="thumbView" type="image/svg+xml" src="Seoul_subway_linemap_ko.svg" class="thumbViewClass"/>
+        </div> -->
+
+    <script>
+        thumbnailViewer({ mainViewId: 'seoulSubwayMap', thumbViewId: 'thumbView' });  
+    </script>
+    <script>
+    
+            function alertInfo() {
+            
+                alert('역을 검색하세요 ex) 강남역 → 강남')
+            }
+
+        function ClickSubmit() {
+            
+            const stationName = document.getElementById('input_station_name').value;
+            // console.log(stationName)
+            // 입력값이 없는 경우 처리할 내용  
+            if (stationName == '' || !stationName) {
+                alert('역 이름을 입력하세요!')
+                return false
+                
+            } else {
+
+                const encodedStationName = encodeURIComponent(stationName);
+                const url = "/Client/web/subway_detail_page.html?station_name=" + encodedStationName;
+                window.location.href = url;
+                }
+                
+
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    font-family: 'KIMM_Bold';
+}
+body {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+
+    --color-myskyblue: rgb(172, 214, 240);
+    --color-mynavy: rgb(2, 57, 91);
+    --color-myred: rgb(240, 54, 41);
+    --color-myblue: rgb(43, 94, 196);
+}
+/* top */
+#left__arrow {
+    position: relative;
+    top:60px;
+    left: 3%;
+}
+h2{
+    font-size: var(--font-medium);
+    display:flex;
+}
+#add__address__top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 30px;
+}
+
+#input__nickname {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#dropdown__places {
+    margin-right: 20px;
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    border: none;
+    font-size: var(--font-regular);
+   
+}
+#input__nickname > input {
+    width: 55%;
+    height: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: var(--color-myskyblue);
+    /* padding-left: 10px; */
+    font-size: var(--font-regular);
+    text-align: center;
+}
+#search__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search__container >p {
+    width: 25%;
+    margin-right: 10px;
+}
+#search__container > input {
+    width: 60%;
+    margin-right: 10px;
+    height: 30px;
+    font-size: var(--font-small);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#search__icon__container {
+    border: none;
+    border-radius: 50%;
+    background-color: gainsboro;
+    
+}
+#search__icon__container > i {
+    padding: 10px;
+}
+
+#adderess__container {
+    /* display: none; */
+    background-color: gainsboro;
+    width: 100%;
+    height: 100px;
+}
+.address__container {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.address__kind, .loacation__name, .address {
+    font-size: var(--font-small);
+}
+.address__icon__container {
+    margin-right: 20px;
+    margin-left: 15px;
+}
+.address__icon__container > i {
+    font-size: 20px;
+}
+#btn__container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+.btn {
+    width: 80px;
+    height: 40px;
+    background-color: var(--color-mynavy);
+    color: white;
+    font-size: 16px;
+}

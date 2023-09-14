@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    font-family: 'KIMM_Bold';
+}
+body {
+    margin: 15% 15px;
+}
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+
+    --color-myskyblue: rgb(172, 214, 240);
+    --color-mynavy: rgb(2, 57, 91);
+    --color-myred: rgb(240, 54, 41);
+    --color-myblue: rgb(43, 94, 196);
+}
+/* #left__arrow {
+    position: relative;
+    top:60px;
+    left: 3%;
+} */
+#icon__x__button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+
+}
+h2{
+    font-size: var(--font-medium);
+    display:flex;
+}
+#favorite__top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 30px;
+}
+#favorite__top > img {
+    margin-right: 10px;
+}
+#select__checkBox__all {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+#select__checkBox__all > input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right:10px ;
+}
+
+
+ul {
+    margin: 0;
+    padding-left: 10px;
+    list-style: none;
+}
+.favorite__title {
+    display: flex;
+    align-items: center;
+}
+.favorite__title > input {
+    width:20px;
+    height:20px;
+    margin-right: 10px;
+}
+.favorite__title > span {
+    font-size: 20px;
+    color: var(--color-myblue);
+}
+.divider {
+
+    padding-left: 0;
+}
+.favortie__contents__text {
+    margin-left: 20px;
+}
+
+
+
+.delete__checkbtn__container {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    right: 5%;
+    bottom: 17%;
+}
+
+.delete__checkbtn__container .active {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    right: 5%;
+    bottom: 17%;
+}
+#delete__icon__container {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+}  
+.delete__btn {
+    width: 100px;
+    height: 50px;
+    font-size: var(--font-regular);
+}
+#delete__checked {
+    margin-right: 15px;
+    background-color: white;
+    color: var(--color-mynavy);
+}
+#delete__all {
+    background-color: var(--color-myred);
+    color: white;
+}
+.list {
+    list-style: none;
+}

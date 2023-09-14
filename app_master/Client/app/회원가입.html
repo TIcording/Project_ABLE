@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./css/회원가입.css">
+</head>
+<body>
+    <!-- 회원가입 top -->
+    <a href="./로그인창.html">
+        <img src="./images/left-arrow.png" alt="이전으로 돌아가는 아이콘" id="left__arrow">
+    </a>
+    <div id="signup__title__container">
+        <h2>회원가입</h2>
+    </div>
+
+    <div id="container">
+        <div id="userid__container" class="com__container">
+            <p class="text">
+                아이디
+            </p>
+            <div id="id__duplicate__btn__container">
+                <input type="text" id="input__id" placeholder="영문과 숫자를 포함" class="inputBox">
+            <!-- <button type="submit" id="id__duplicate__btn" >
+                중복확인
+            </button> -->
+            </div>
+            <div class="error-container"></div>
+            
+        </div>
+        
+        <div id="userpw__container" class="com__container">
+            <p class="text">
+                비밀번호
+            </p>
+            <input type="password" id="input__pw" placeholder="숫자 4글자 이상" class="inputBox">
+        </div>
+        <div class="error-container"></div>
+
+        <div id="userpwcheck__container" class="com__container">
+            <p class="text">
+                비밀번호 확인
+            </p>
+            <input type="password" id="input__pw__check" placeholder="비밀번호 한번 더 입력" class="inputBox">
+            <div class="error-container"></div>
+        </div>
+
+        <div id="name__container" class="com__container">
+            <p class="text">
+                이름
+            </p>
+            <input type="text" id="input__name" placeholder="" class="inputBox">
+            <div class="error-container"></div>
+        </div>
+
+        <div id="email__container" class="com__container">
+            <p class="text">
+                이메일
+            </p>
+            <input type="text" id="input__email" placeholder="" class="inputBox">
+            <div class="error-container"></div>
+        </div>
+
+        <div id="hp__container" class="com__container">
+            <p class="text">
+                휴대전화 번호
+            </p>
+            <input type="text" id="input__hp" placeholder="010-0000-0000" class="inputBox">
+            <div class="error-container"></div>
+        </div>
+
+        <div id="address__container" class="com__container">
+            <p class="text">
+                주소
+            </p>
+            <input type="text" id="input__address" placeholder="" class="inputBox">
+            <div class="error-container"></div>
+        </div>
+    </div>
+
+    <!-- 버튼 -->
+    <div id="btn__container">
+        <button type="reset" name="입력초기화" id="reset_btn" class="btn">입력 초기화</button>
+        <button type="button" name="가입완료" id="submit_btn" class="btn" >가입 완료</button>
+    </div>
+    <script src="./js/signUp_api.js"></script>
+    <!-- <script src="./js/regist.js"></script> -->
+    <!-- <script src="./js/confirmSignup.js"></script> -->
+</body>
+</html>

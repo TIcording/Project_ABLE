@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+*{
+    font-family: 'KIMM_Bold'; 
+}
+body {
+    margin: 13% 15px;
+}
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+    
+    --color-myskyblue: rgb(172, 214, 240);
+    --color-mynavy: rgb(2, 57, 91);
+}
+#left__arrow {
+    position: relative;
+    top:60px;
+    left: 3%;
+}
+h2{
+    font-size: var(--font-medium)
+}
+#health__top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+}
+
+#place__container  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    margin-bottom: 20px;
+}
+.hospital {
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.hospital > p {
+    margin-left: 10px;
+    color: var(--color-mynavy);
+}
+.hospital__info__container {
+    width: 90%;
+    height: 45%;
+    background-color: var(--color-myskyblue);
+    margin: 0 auto;
+    padding: 5px;
+    
+}
+.small__plus {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#plusInfo__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#plusInfo__container > img {
+    width: 50px;
+    height: 50px;
+}
+
+#current__location__container > p{ color: skyblue;}
+
+#search_medical {
+    width: 55%;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: gainsboro;
+    padding-left: 10px;
+    margin-right: 10px;
+    
+    
+
+}
+
+#search_result{
+    border: 1px solid black;
+    border-bottom: none;
+    overflow: auto;
+}
+
+#search_result_total{
+    border-bottom: 1px solid black;
+    margin: 20px;
+}
+
+#get_out_of_search_result{
+    position: absolute;
+    right: 4%;
+    width: 8%;
+    margin: 10px;
+}

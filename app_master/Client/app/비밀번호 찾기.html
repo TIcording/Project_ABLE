@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 찾기</title>
+    <link rel="stylesheet" href="./css/비밀번호 찾기.css">
+    <script src="./js/findPassword_api.js" defer></script>
+</head>
+<body>
+    <!-- 비밀번호 찾기 top -->
+    <a href="로그인창.html">
+        <img src="./images/left-arrow.png" alt="이전으로 돌아가는 아이콘" id="left__arrow">
+    </a>
+    <div id="findPw__title__container">
+        <h2>비밀번호 찾기</h2>
+    </div>
+    
+    <!-- text -->
+    <div id="text__container">
+        <div id="text__info">
+            <img src="./images/information.png" alt="">
+        <span> 비밀번호가 기억나지 않으세요?</span>
+        </div>
+        <p id="text__help">새로운 비밀번호를 설정하고 로그인할 수 있습니다!</p>
+    </div>
+
+    <!-- input -->
+    <div id="input__info__container">
+        <div id="input__id__container" class="input__container">
+            <label for="input__id" class="text">아이디</label>
+            <input type="text" id="input__id" class="input" placeholder="아이디를 입력하세요">
+        </div>
+    
+        <div id="input__name__container" class="input__container">
+            <label for="input__name" class="text">이름</label>
+            <input type="text" id="input__name" class="input" placeholder="이름을 입력하세요">
+        </div>
+    
+        <div id="input__hp__container" class="input__container">
+            <label for="input__hp" class="text">핸드폰 번호</label>
+            <input type="text" id="input__hp" class="input" placeholder="010-0000-0000">
+        </div>
+    </div>
+
+    <!-- btn -->
+    <div id="btn__container">
+        <!-- <button type="submit" class="btn" id="cancel__btn">
+            <a href ="로그인창.html">이전으로</a>
+        </button> -->
+        <button type="submit" class="btn" id="submit__btn">확인
+            <!-- <a href ="비밀번호 변경.html">확인</a> -->
+        </button>
+    </div>
+</body>
+</html>

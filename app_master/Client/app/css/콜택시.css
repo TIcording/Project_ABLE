@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    font-family: 'KIMM_Bold';
+}
+body {
+    margin: 15% 15px;
+}
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+
+    --color-myskyblue: rgb(172, 214, 240);
+    --color-mynavy: rgb(2, 57, 91);
+}
+
+
+#icon__x__button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 60px;
+
+}
+h2{
+    color: goldenrod;
+    font-size: var(--font-medium);
+    
+}
+.callNumber {
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+#taxi__phonenum__container{
+    margin-bottom: 30px;
+}
+#text1 {
+    font-size: var(--font-small);
+}
+#text2{
+    font-size: 16px;
+}
+#taxi__call__container {
+    margin-left: 15px;
+    padding-top: 35px;
+}
+.info__text {
+    margin: 0;
+}
+#taxi__phonenum__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#taxi__phonenum__container > p > a {color: var(--color-mynavy);}
+#menu__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon__container > i {
+    font-size: 70px;
+    color: white;
+}
+
+.contents__container > p {
+    color: white;
+}
+
+
+.wrapper {
+    background-color: blueviolet;
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+a:visited {
+    color: white;
+}
+
+/* #content1 {
+    background-color:blueviolet;
+    width: 50%;
+}
+#content2 {
+    background-color:blueviolet;
+    width: 50%;
+}
+#content3 {
+    background-color: blueviolet;
+    width: 50%;
+}
+#content4 {
+    background-color: blueviolet;
+    width: 5%;
+}
+#content5 {
+    background-color: blueviolet;
+    width: 50%;
+}
+#content6 {
+    background-color: blueviolet;
+    width: 50%;
+} */

@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    font-family: 'KIMM_Bold';
+}
+body {
+    margin: 18% 20px;
+}
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+
+    --color-myskyblue: rgb(172, 214, 240);
+    --color-mynavy: rgb(2, 57, 91);
+    --color-myred: rgb(240, 54, 41);
+    --color-myblue: rgb(43, 94, 196);
+}
+
+#icon__x__button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+}
+#sub__convenience__title{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#sub__convenience__title > * {
+    font-size: 20px ;
+}
+
+#stationName__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#lineNumber__continer {
+    /* border: 1px solid slateblue; */
+    border-radius: 100%;
+    padding:7px 10px;
+    margin-right: 10px;
+    background-color: orange;
+    color:white;
+    
+}
+#stationName__name {
+    margin-right: 10px;
+}
+#stationName__lineNumber {
+    color: orange;
+}
+#sub__officephone__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#sub__officephone__container >img {
+    margin-right: 10px;
+}
+#wheelchair__title__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#wheelchair__title__container > img{
+    margin-right: 10px;
+}
+
+#boardinglocation__title__container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 50px;
+}
+#boardinglocation__title__container > img{
+    margin-right: 10px;
+}
+/* #wheelchair__context__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+} */
+.wheelchair__lineNum {
+    width: 15px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 100%;
+    padding:3px 7px;
+    margin-right: 20px;
+    background-color: orange;
+    color:white;
+    text-align: center;
+}
+#wheelchair__contain {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 15px;
+}
+#wheelchair__context__container >p {
+    margin-right: 40px;
+}
+#boardinglocation__text__container > p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+/* #boardinglocation__context__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+.direnction {
+    background-color: orange;
+    border-radius:20px;
+    padding: 8px;
+    color: white;
+    width: 33%;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 20px;
+}
+#elevator__title__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#elevator__title__container > img{
+    margin-right: 10px;
+}
+.elevator__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+/* #elevator__context__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+} */
+.inner__outer__separator {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: skyblue;
+    border-radius: 20px;
+    padding: 5px;
+    margin-right: 10px;
+}
+#wheelchairLift__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#toilet__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.wheelchair__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#wheelchairLift__container > img, #toilet__container > img,
+#charger__container > img{
+    margin-right: 10px;
+}
+.title__text {
+    font-size: var(--font-regular
+    );
+}
+#boarding__description {
+    font-size: var(--font-micro
+    );
+    margin-top: 100px;
+}
+#boardinglocation__title {
+    margin-bottom: 40px;
+}
+#boardinglocation__contain {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 5px;
+}
+#hr__top {
+    height: 10px;
+    border: 0;
+    box-shadow: 0px 10px 10px -10px #bbb inset;
+}
+#charger__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.outer {
+    background-color: rgb(160, 217, 191);
+}
+p.title {
+    /* width: 44%; */
+    margin-right: 30px;
+}
+#toiletCount__container > p{
+    color: navy;
+}
+.no_info {
+    color: gray;
+}
+#no_info2 {
+    color: gray;
+}
+.all {
+    background-color: rgb(194, 156, 233);
+}
+#toilet__title, #charger__title {
+    width: 44%;
+    margin-right: 30px;
+}

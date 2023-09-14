@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즐겨찾기</title>
+    <link rel="stylesheet" href="./css/즐겨찾기.css">
+    <script src="./js/favortie.js" defer></script>
+    <script src="./js/favorite_api.js" defer></script>
+    <script src="../find_road/favorite_route.js" defer></script>
+</head>
+<body>
+    <!-- 즐겨찾기 top -->
+    <!-- <a href="../web/map.html">
+        <img src="./images/left-arrow.png" alt="이전으로 돌아가는 아이콘" id="left__arrow">
+    </a> -->
+    <div id="favorite__top">
+        <img src="./images/star.png" alt="즐겨찾기 아이콘">
+        <h2>즐겨찾기</h2>
+    </div>
+    <a href="../web/map.html"><img src="./images/close.png" alt="닫기 버튼" id="icon__x__button" class="button__move"></a>
+        
+
+    <!-- 목록 -->
+    <div id="select__checkBox__all"  onclick="CheckAll();">
+        <input type="checkbox" name="ch_all" id="ch_all" value="" >전체선택    
+    </div>
+    
+    <div id="list__container">
+        <ul>
+                
+            
+
+        </ul>       
+    </div>
+
+
+    <!-- 삭제 btn -->
+    <div class="delete__checkbtn__container active">
+        <button id="delete__checked" type="button" class="delete__btn">
+            선택삭제
+        </button>
+        
+            <button id="delete__all" type="button" class="delete__btn">
+                전체삭제
+            </button>
+        
+        
+    </div>
+    <div id="delete__icon__container">
+        <img src="./images/bin.png" alt="휴지통 아이콘">
+    </div>
+</body>
+</html>

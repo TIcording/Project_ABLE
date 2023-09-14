@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    font-family: 'KIMM_Bold';
+}
+body {
+    margin: 15% 15px;
+}
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+
+    --color-myskyblue: rgb(172, 214, 240);
+    --color-mynavy: rgb(2, 57, 91);
+    --color-myred: rgb(240, 54, 41);
+    --color-myblue: rgb(43, 94, 196);
+}
+/* top */
+#icon__x__button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+
+}
+h2{
+    font-size: var(--font-medium);
+    display:flex;
+}
+#address__top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 30px;
+}
+
+/* 주소목록 btn */
+#btn__container {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+}
+.list__btn {
+    width: 70px;
+    height: 30px;
+    padding: 0;
+    background-color: var(--color-myskyblue);
+    border-radius: 10px;
+}
+/* .list__btn.selected, .list__btn:hover {
+    background-color: var(--color-mynavy);
+    color: white;
+} */
+
+
+
+#info__container > p{
+    font-size: var(--font-micro);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.address__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.address__icon__container {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    
+}
+.address__icon__container > i {
+    font-size: 30px;
+    color: var(--color-myblue);
+}
+.address__contents__container {
+    width: 60%;
+}
+/* .address__contents__container > p {
+    margin: 5px;
+    width: 65px;
+} */
+
+.address__kind {
+    font-size: var(--font-regular);
+    color: var(--color-myblue);
+}
+.loacation__name {
+    font-size: 18px;
+}
+.address {
+    font-size: var(--font-small);
+    color: rgb(187, 187, 187);
+}
+.edit__icon__container {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    
+}
+
+.edit__icon__container > i {
+    font-size: 20px;
+}
+
+.edit__address__container {
+    display: none;
+    width: 100%;
+    height: 180px;
+    background-color: rgb(241, 241, 241);
+    padding-top: 10px;
+
+}
+
+.edit__search__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.edit__search__container > p{
+    width:30%;
+    margin-left: 0;
+    text-align: center;
+    /* margin-right: 5px; */
+}
+.edit__nickname__container {
+    background-color: gainsboro;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+
+}
+.edit__search__place{
+    width: 55%;
+    height: 30px;
+    /* margin-right: 15px; */
+    border: none;
+    background-color: gainsboro;
+    border-radius: 20px;
+    
+    
+}
+
+.edit__nickname {
+    /* border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black; */
+    border: none;
+    background-color: gainsboro;
+    height: 30px;
+}
+.edit__address__icon__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.edit__address__icon__container > i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.edit__address__icon__container > input{
+    height: 20px;
+}
+#input__search__place {
+    height: 20px;
+    width: 30px;
+}
+
+#edit__btn__container {
+    display: flex;
+    justify-content: end;
+}
+.edit__btn {
+    height: 30px;
+    width: 100px;
+    margin-right: 15px;
+    background-color: white;
+    color: var(--color-mynavy);
+    border-radius: 10px;
+    border: none;
+    font-size: var(--font-small);
+}
+.edit__btn:hover {
+    color:white;
+    background-color: var(--color-mynavy);
+}
+
+#plus__icon__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#add__place{
+    text-decoration: none;
+    color: gray;
+}
+
+
+
+

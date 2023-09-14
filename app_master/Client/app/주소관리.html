@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소관리</title>
+    <link rel="stylesheet" href="./css/주소관리.css">
+    <script src="./js/address.js" defer></script>
+    <script src="./js/address_mainApi.js" defer></script>
+    <script src="https://kit.fontawesome.com/d6c66f23e8.js" crossorigin="anonymous"></script>
+    <script src="./js/address_route.js" defer></script>
+</head>
+<body>
+    <!-- 주소관리 top -->
+    <!-- <a href="../web/map.html">
+        <img src="./images/left-arrow.png" alt="이전으로 돌아가는 아이콘" id="left__arrow">
+    </a> -->
+    <div id="address__top">
+        <h2>주소관리</h2>
+    </div>
+    <a href="../web/map.html"><img src="./images/close.png" alt="닫기 버튼" id="icon__x__button" class="button__move"></a>
+
+    <!-- 주소관리 설명 -->
+    <div id="info__container">
+        <p>주소를 등록하여 길찾기를 보다 편리하게 이용할 수 있습니다.</p>
+    </div>
+
+    <!-- 주소메뉴 -->
+    <div id="list__container">
+        <!-- <ul id="btn__container">
+            <button class="list__btn">
+                <i class="fa-solid fa-house-chimney">집</i>
+            </button>
+            <button class="list__btn">
+                <i class="fa-solid fa-school">학교</i>
+            </button>
+            <button class="list__btn">
+                <i class="fa-solid fa-briefcase">직장</i>
+            </button>
+            <button class="list__btn">
+                <i class="fa-solid fa-house-chimney-medical">병원</i>
+            </button>
+            <button class="list__btn">
+                <i class="fa-solid fa-house-chimney">기타</i>
+            </button>
+        </ul>        -->
+    </div>
+
+    <!-- 주소 목록 -->
+    <div class="address__wrapper">
+        <!-- home -->
+        <div class="address__container">
+            <div class="address__icon__container" id="home__address1">
+                <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <div class="address__contents__container" id="home__name1">
+                <p class="address__kind">집</p>
+                <p class="loacation__name">장소명</p>
+                <p class="address">상세주소</p>
+            </div>
+            <div class="edit__icon__container" id="edit__icon__home">
+                <i class="fa-regular fa-pen-to-square" ></i>
+            </div>
+        </div>
+
+        <!-- 수정버튼 누르면 나오는 div -->
+        <div class="edit__address__container" id="edit__container__home">
+            <div class="edit__address__icon__container">
+                <i class="fa-solid fa-house-chimney"></i>
+                <div class="edit__nickname__container">
+                    <input type="text" placeholder="별명을 입력해주세요." class="edit__nickname">
+                </div>
+            </div>
+
+            <div class="edit__search__container">
+                <p>장소검색</p>
+                <input type="text" class="edit__search__place">
+                <i class="fa-solid fa-magnifying-glass" id="input__search__place"></i>
+            </div>     
+            <div id="edit__btn__container">
+                <button type="button" class="edit__btn">주소 삭제</button>
+                <button type="submit" class="edit__btn">수정 완료</button>
+            </div>    
+        </div>              
+
+        <!-- school -->
+        <div class="address__container">
+            <div class="address__icon__container" id="school__address1">
+                <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="address__contents__container" id="school__name1">
+                <p class="address__kind">학교</p>
+                <p class="loacation__name">장소명</p>
+                <p class="address">상세주소</p>
+            </div>
+            <div class="edit__icon__container" id="edit__icon__school">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+        </div>
+             
+        
+        <!-- working -->
+        <div class="address__container">
+            <div class="address__icon__container" id="working__address">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="address__contents__container" id="working__name1">
+                <p class="address__kind">직장</p>
+                <p class="loacation__name">장소명</p>
+                <p class="address">상세주소</p>
+            </div>
+            <div class="edit__icon__container" id="edit__icon__working">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+        </div>
+
+        
+        <!-- hospital -->
+        <div class="address__container">
+            <div class="address__icon__container" id="hospital__address">
+                <i class="fa-solid fa-house-chimney-medical"></i>
+            </div>
+            <div class="address__contents__container" id="hospital__name1">
+                <p class="address__kind">병원</p>
+                <p class="loacation__name">장소명</p>
+                <p class="address">상세주소</p>
+            </div>
+            <div class="edit__icon__container" id="edit__icon__hospital">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+        </div>
+         
+        <!-- etc -->
+        <div class="address__container">
+            <div class="address__icon__container" id="etc__address">
+                <i class="fa-solid fa-thumbtack"></i>
+            </div>
+            <div class="address__contents__container" id="etc__name1">
+                <p class="address__kind">기타</p>
+                <p class="loacation__name">장소명</p>
+                <p class="address">상세주소</p>
+            </div>
+            <div class="edit__icon__container" id="edit__icon__etc">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+        </div>      
+        
+    </div>
+        <!-- 추가 등록 -->
+
+        <a href="주소등록.html" id="add__place">
+            <div id="plus__icon__container">
+                <img src="./images/sadd.png" alt="추가등록아이콘">
+                <span>등록</span>
+            </div>
+        </a>
+
+
+</body>
+</html>

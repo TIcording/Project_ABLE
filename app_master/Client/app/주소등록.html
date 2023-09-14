@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소등록</title>
+    <link rel="stylesheet" href="./css/주소등록.css">
+    <script src="https://kit.fontawesome.com/d6c66f23e8.js" crossorigin="anonymous"></script>
+    <script src="./js/address_api.js" defer></script>
+</head>
+<body>
+    <!-- 주소등록 top -->
+    <a href="주소관리.html">
+        <img src="./images/left-arrow.png" alt="이전으로 돌아가는 아이콘" id="left__arrow">
+    </a>
+    <div id="add__address__top">
+        <h2>주소등록</h2>
+    </div>
+
+    <!-- 주소 종류 및 별명 입력 -->
+    <div id="input__nickname">
+        <select name="place" id="dropdown__places">
+            <option value="home">집</option>
+            <option value="school">학교</option>
+            <option value="working">직장</option>
+            <option value="hospital">병원</option>
+            <option value="etc">기타</option>
+        </select>
+        <input id="nickname__input" type="text" placeholder="별명을 입력하세요">
+    </div>
+
+    <!-- 장소 검색 -->
+    <div id="search__container">
+        <p>주소 등록</p>
+        <input id="address__input" type="text" placeholder="주소를 입력하세요">
+        <div id="search__icon__container">
+            <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+        </div>
+    </div>
+
+    <!-- 검색하고 주소를 불러왔을 때 보이는 div -->
+    <!-- <div id="adderess__container">
+        <div class="address__container">
+            <div class="address__icon__container" id="school__address1">
+                
+                <i class="fa-solid fa-school"></i>
+            </div>
+
+            <div class="address__contents__container">
+                <p class="address__kind">장소의 종류</p>
+                <p class="loacation__name">장소명</p>
+                <p class="address">상세주소</p>
+            </div>
+            
+        </div>
+    </div> -->
+
+
+
+    <!-- 버튼 -->
+    <div id="btn__container">
+        <button id="save__btn" type="submit" class="btn">
+            저장
+        </button>
+    </div>
+</body>
+</html>

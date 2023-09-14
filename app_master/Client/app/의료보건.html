@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의료 보건</title>
+    <link rel= "stylesheet" href="./css/의료보건.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1be7f9b854610aa6f014ee79cfc8be1b&libraries=services"></script>
+    <!-- <script src="../web/ambulance_marker.js"></script> -->
+    <!-- <script src="./js/search_medical.js" defer></script> -->
+    <!-- <script src="../web/map.js"></script> -->
+    <script src="../web/search_medical.js" defer></script>
+</head>
+<body>
+    <!-- 의료보건 top -->
+    <a href="../web/map.html">
+        <img src="./images/left-arrow.png" alt="이전으로 돌아가는 아이콘" id="left__arrow">
+    </a>
+        
+    <div id="health__top">
+        <h2> 응급실 정보</h2> 
+    </div>
+
+    <!-- 현재위치 불러오는 버튼  -->
+    <div id="place__container">
+        <input type="text" id="search_medical" placeholder="주소 혹은 장소를 입력하세요">
+        <img src="./images/target.png" alt="보내기"class="img1" >
+    </div>
+    <div id="search_result" style="display:none;">
+        <img src="../web/img/x.png" alt="x 버튼" id="get_out_of_search_result">
+        <div id="road_search">
+
+        </div>
+        
+    </div>
+
+    <!-- 병원 정보 -->
+    <div id="hospital__info__container">
+        <div id="hospital1" class="hospital">
+            <p>병원정보</p>
+            <div class="hospital__info__container"></div>
+
+        </div>
+
+        <div id="hospital2" class="hospital">
+            <p>병원정보</p>
+            <div class="hospital__info__container"></div>
+
+        </div>
+        
+    </div>
+</body>
+</html>

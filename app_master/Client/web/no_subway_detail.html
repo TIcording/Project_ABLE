@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Found Subway Station</title>
+    <style>
+        @font-face {
+            font-family: 'KIMM_Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        * {
+            font-family: 'KIMM_Bold';
+        }
+
+        #container {
+            display: inline-block;
+            text-align: center;
+            align-items: center;
+            /* height: 100vh; */
+            width: 100%;
+            /* flex-wrap: wrap */
+        }
+
+        body {
+            margin:50% 8%;
+        }
+        #no_info {
+            font-size: 22px;
+            line-height: 1.5;
+        }
+
+        #no_info_text {
+            font-size: 14px;
+            color: gray;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        #img__container {
+            width: 100%;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #img__container > img {
+            margin-right: 15px;
+        }
+        #img__container > p {
+            font-size: 20px;
+        }
+        #beforepage_btn{
+            border: none;
+            background-color: skyblue;
+            width: 25%;
+            height: 30px;
+            border-radius: 10px;
+        }
+        a:visited {
+            color: black;
+            text-decoration-line: none;
+        }
+        a{
+            color: black;
+            text-decoration-line: none;
+        }
+        /* button:hover{
+            cursor: pointer;
+            border: 1px solid gray;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="img__container">
+        <img src="../app/images/error.png" alt="">
+        <p>Not Found!</p>
+    </div>
+    <div id="container">
+        <p id="no_info">검색하신 역의 편의시설 정보를 찾을 수 없습니다.</p>
+        <p id="no_info_text">서울교통공사에서 제공하는 <b style="color: rgb(42, 95, 202); text-decoration: underline;">1-8호선, 9호선 2~3단계(언주~중앙보훈병원)</b>만 제공하고 있습니다.</p>
+        <button id="beforepage_btn"><a href="../subway/index.html">이전으로</a></button>
+    </div>
+
+</body>
+
+</html>

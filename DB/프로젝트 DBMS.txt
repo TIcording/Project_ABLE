@@ -1,0 +1,40 @@
+DataBase
+
+RDBMS 
+- SQL 지원
+	다른 DBMS는 SQL을 지원하지 않음(No-SQL)
+- table을 사용
+	column(필드), row(레코드)
+- Primary Key
+	unique, not null, foreign key와 참조, 인덱싱기능(where절에서 사용할 때 유용)
+
+
+SQL 순위 
+1. Oracle
+- 안정적인 RDBMS 중 하나
+2. MySQL
+3. MS-SQL
+4. PostgreSQL
+5. SQLite - 휴대폰에서 저장하고 사용할 때 주로 사용(핸드폰 캘린더, 전화번호부 등등)
+
+
+NoSQL
+- SQL을 전혀 사용하지 않음
+- Key-Value
+- Document
+- Wide-column
+- Graph
+
+ORM/ODM
+-ORM(Object Relational Mapping): 객체와 관계형 데이터베이스(RDBMS) 간의 매핑을 위한 기술로, 객체 간의 관계를 바탕으로 SQL을 생성하고 실행하여 데이터베이스와의 상호작용을 하게해줌
+	TYPEORM, Sequelize, Prisma
+
+-ODM(Object Document Mapping): 객체와 NoSQL 데이터베이스 간의 매핑을 위한 기술로, MongoDB, Couchbase, Cassandra 등의 NoSQL 데이터베이스와의 연동을 쉽게 도와줌
+	mongoose
+
+
+* 스토리보드를 보고 프론트엔드쪽의 모든 페이지에 대한 sql을 작성하기 (이틀), 관리자 페이지도!
+* mysql에 db를 만들어서 페이지당 sql문을 만들어보기
+
+회원가입 -> 로그인 -> 메인 -> 서브페이지 ... 등에 쓰이는 sql 문장들
+insert?       select ?    게시물리스트를 뽑은 sql문? 

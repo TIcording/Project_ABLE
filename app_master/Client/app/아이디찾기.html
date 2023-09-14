@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 찾기</title>
+    <link rel="stylesheet" href="./css/아이디찾기.css">
+    <script src="./js/findId.js" defer></script>
+    <script src="./js/find_userID.js" defer></script>
+</head>
+<body>
+    <!-- 아이디 찾기 top -->
+    <a href="로그인창.html">
+        <img src="./images/left-arrow.png" alt="이전으로 돌아가는 아이콘" id="left__arrow">
+    </a>
+    <div id="findId__title__container">
+        <h2>아이디 찾기</h2>
+    </div>
+
+    <!-- text -->
+    <div id="text__container">
+        <div id="text__info">
+            <img src="./images/information.png" alt="">
+        <span> 가입하신 아이디가 기억나지 않으세요?</span>
+        </div>
+        <p id="text__help">가입시 입력한 이메일과 핸드폰 번호를 찾을 수 있습니다.</p>
+    </div>
+
+    <!-- 체크박스 -->
+    <div id="checkbox__container">
+        <div id="email__checkbox__container">
+            <input type="radio" id='checkbox__email' name='choice' value="e-mail"checked>
+            <span>이메일로 찾기</span>
+            
+        </div>  
+        <div id="hp__checkbox__container">
+            <input type="radio"id='checkbox__hp'name='choice'value="hp" >
+            <span>핸드폰 번호로 찾기</span>
+        </div>
+    </div>
+
+    <!-- input -->
+    <div id="input__container">
+        <div id="input__name__container">
+            <p class="text" id="text__name" >이름</p>
+            <input id = "input__name" type="text" name="username" maxlength="20"class="input"
+            id="username"
+            placeholder="">
+            
+        </div>
+    
+        <div id="input__email__container">
+            <p class="text" id="text__email">이메일</p> 
+            <input id = "input__email" type="text" name="username" maxlength="20"class="input"
+            id="email"
+            placeholder="">
+            
+        </div>
+    </div>
+    
+    
+<!-- 버튼 -->
+    <div id="submit__btn__container">
+        <button type="submit" id="submit__btn">
+            <a href="#">확인</a>
+        </button>
+    </div>
+
+</body>
+</html>

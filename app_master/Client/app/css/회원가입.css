@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+*{
+    font-family: 'KIMM_Bold';
+}
+body {
+    margin: 15% 15px;
+}
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+    
+    --color-myskyblue: rgb(172, 214, 240);
+    --color-mynavy: rgb(2, 57, 91);
+}
+
+#left__arrow {
+    position: relative;
+    top:60px;
+    left: 3%;
+}
+h2{
+    font-size: var(--font-medium)
+}
+
+#signup__title__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-direction: column; */
+    margin-bottom: 30px;
+}
+
+#container {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.com__container {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.text{
+    width: 25%;
+    margin-left: 10px;
+    font-size: var(--font-small);
+    margin-right: 15px;
+}
+.inputBox{
+    width: 60% ;
+    height: 25px;
+    background-color:var(--color-myskyblue);
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+}
+
+#input__id {
+    /* margin-right: 15px; */
+    width: 100%;
+}
+#input__pw, #input__pw__check {
+    font-family: "굴림";
+}
+#id__duplicate__btn {
+    height: 30px;
+    background-color: var(--color-mynavy);
+    color: white;
+}
+
+#id__duplicate__btn__container{
+    width: 60%;
+}
+
+#btn__container {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset_btn {
+    margin-right: 15px;
+    color: var(--color-mynavy);
+    background-color: white;
+}
+
+#submit_btn {
+    margin-left: 15px;
+    background-color: var(--color-mynavy);
+    color: white;
+}
+.btn {
+    width: 100px;
+    height: 40px;
+    font-size: var(--font-small);
+}
+
+/* #id__duplicate__btn {
+    margin: 20px;
+} */
+/* .error-message{
+    float: bottom;
+} */
+
+
+
+
+
+
+/* h2{
+    text-align:center;
+    font-size: 50px;
+}
+p{
+    text-align:center;
+    
+}
+.input{
+    box-sizing: border-box;
+    width:50%;
+    background-color: lightblue;
+    padding: 10px 20px;
+    margin:5px ;
+    border-radius: 10px;
+}
+.input1{
+    box-sizing: border-box;
+    width:35%;
+    background-color: lightblue;
+    padding: 10px 20px;
+    margin:5px ;
+    border-radius: 10px;
+}
+.button1{
+    background-color:white;
+    border-radius: 10px;
+    height:30px;
+}
+
+.button2{
+    background-color:#44445a;
+    color:white;
+    border-radius: 10px;
+    height:30px;
+}
+.button{
+    width:70px;
+    height:40px;
+    border-radius: 10px;
+}
+.text{
+    position: relative;
+    right: 90px;
+    top:3px;
+}
+.text1{
+    position: relative;
+    right: 70px;
+    top:3px;
+}
+.text2{
+    position: relative;
+    right: 110px;
+    top:3px;
+}
+.text3{
+    position: relative;
+    right: 70px;
+    top:3px
+}
+
+ */

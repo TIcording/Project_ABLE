@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 변경</title>
+    <link rel="stylesheet" href="./css/비밀번호 변경.css">
+    <script src="./js/findPw_changePw_api.js" defer></script>
+</head> 
+<body>
+    <!-- 비밀번호 변경 top -->
+    <div id="changePw__top">
+        <h2>비밀번호 변경</h2>
+    </div>
+    <a href="로그인창.html">
+        <img src="./images/close.png" alt="닫기 버튼" id="icon__x__button" class="button__move">
+    </a>
+    
+    <!-- text -->
+    <div id="text__container">
+        <div id="text__info">
+            <img src="./images/information.png" alt="">
+        <span> 새로 설정할 비밀번호를 입력하세요.</span>
+        </div>
+    </div>
+
+    <!-- pw input -->
+    <div id="input__newPw__container">
+        <div id="input__newPW" class="input__container">
+            <p class="text">새로운 비밀번호</p>
+            <input type="password" id="newPw" class="input" placeholder="숫자 4글자 이상">
+        </div>
+        <div id="input__newPW__check" class="input__container">
+            <p class="text">새로운 비밀번호 확인</p>
+            <input type="password" id="newPw__check" class="input" placeholder="비밀번호 재입력">
+        </div>
+    </div>
+
+    <!-- btn -->
+    <div id="btn__container">
+        <button type="submit" class="button" id="btn"
+        >변경 완료
+        </button>
+    </div>
+</body>
+</html>
